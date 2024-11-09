@@ -1,0 +1,94 @@
+﻿@model List<ETickets.Models.Movie>
+@section Scripts{
+    <partial name="_Notifaction.cshtml"></partial>
+}
+<div class="container mt-4">
+    <div class="row mb-4">
+        <div class="col-9">
+            <h2>
+                <a href="https://localhost:7125/" class="text-decoration-none text-dark">
+                    <i class="bi bi-house-door-fill"></i>
+                </a>
+                Go to the main page
+            </h2>
+        </div>
+        <div class="col-3 text-end">
+            <h1>All Movies</h1>
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <div class="col-12 d-flex justify-content-end">
+            <form action="/Movie/Search" method="get" class="d-flex align-items-center">
+                <input class="form-control me-2" type="search" name="searchTerm" placeholder="Search for movies..." required />
+                <button class="btn btn-primary" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="row">
+        @if (!Model.Any())
+        {
+            <div class="alert alert-warning w-100 text-center">There are no matching movies for your search.</div>
+        }
+        else
+        {
+            @foreach (var item in Model)
+            {
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="~/movies/@item.ImgUrl" class="img-fluid rounded-start" alt="@item.Name Poster" />
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5>@item.Name</h5>
+                                    <p class="card-text"><strong>Price:</strong> @item.Price $</p>
+                                    <p class="card-text"><strong>Cinema:</strong> @item.Cinema.Name</p>
+                                    <p class="card-text"><strong>Start Date:</strong> @item.StartDate.ToString("M/d/yyyy h:mm tt")</p>
+                                    <p class="card-text"><strong>End Date:</strong> @item.EndDate.ToString("M/d/yyyy h:mm tt")</p>
+                                    <p class="card-text"><strong>Category:</strong> <a href="/Category/Index">@item.Category.Name</a></p>
+
+                                    @if (DateTime.Now < item.EndDate && DateTime.Now >= item.StartDate)
+                                    {
+                                        <span class="badge bg-success">Available</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge bg-danger">Expired</span>
+                                    }
+                                </div>
+                                <div class="card-footer d-flex justify-content-between">
+                                    <a href="/Movie/Details/@item.Id" class="btn btn-outline-secondary btn-sm">More Details</a>
+                                    <a href="/Movie/Details/@item.Id" class="btn btn-success btn-sm @(DateTime.Now >= item.EndDate ? "disabled" : "")"
+                                       title="@(DateTime.Now >= item.EndDate ? "Cannot book, the movie has expired." : "")">Book Ticket</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+</div>
+
+<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+        <li class="page-item @(ViewBag.CurrentPage == 1 ? "disabled" : "")">
+            <a class="page-link" href="/Movie/Index?pageNum=@(ViewBag.CurrentPage - 1)">Previous</a>
+        </li>
+        
+        @for (int i = 1; i <= ViewBag.TotalPages; i++)
+        {
+            <li class="page-item @(ViewBag.CurrentPage == i ? "active" : "")">
+                <a class="page-link" href="/Movie/Index?pageNum=@i">@i</a>
+            </li>
+        }
+
+        <li class="page-item @(ViewBag.CurrentPage == ViewBag.TotalPages ? "disabled" : "")">
+            <a class="page-link" href="/Movie/Index?pageNum=@(ViewBag.CurrentPage + 1)">Next</a>
+        </li>
+    </ul>
+</nav>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">

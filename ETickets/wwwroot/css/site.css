@@ -1,0 +1,501 @@
+﻿html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+
+
+h1 {
+    color: black;
+}
+
+h3 {
+    color: black;
+}
+
+
+
+<style >
+.movie-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.movie-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 300px;
+    padding: 15px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+    .movie-card img {
+        max-width: 100%;
+        border-radius: 8px;
+    }
+
+.movie-details {
+    margin-top: 10px;
+}
+
+    .movie-details p {
+        margin: 5px 0;
+    }
+
+.button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    .button:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+    }
+
+</style >
+
+
+header {
+    background-color: #fff;
+    color: #333;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+}
+
+header h1 {
+    margin: 0;
+    padding-left: 20px;
+    color: #333;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+    header nav ul li {
+        margin-left: 20px;
+    }
+
+        header nav ul li a {
+            color: #333;
+            text-decoration: none;
+        }
+
+.welcome {
+    background-color: #fff;
+    color: #333;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+    .welcome h2 {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+
+    .welcome p {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+.cta-button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+
+.movie-categories {
+    background-color: #f4f4f4;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+    .movie-categories h2 {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+.categories {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.category {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+
+<style >
+.card {
+    border: 1px solid #dee2e6;
+    Border color border-radius: 0.5rem;
+    Rounded corners
+}
+
+.card-img-top {
+    height: 300px;
+    Fixed height for images object-fit: cover;
+    Crop the image
+}
+
+.badge {
+    font-size: 0.85em;
+    Adjust badge size
+}
+
+
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.pagination {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.page-item {
+    margin: 0 5px;
+}
+
+.page-link {
+    display: block;
+    padding: 8px 12px;
+    background-color: #f8f9fa;
+    color: #007bff;
+    text-decoration: none;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+    .page-link:hover {
+        background-color: #007bff;
+        color: white;
+    }
+
+.disabled .page-link {
+    color: #6c757d;
+    pointer-events: none;
+}
+
+.justify-content-end {
+    justify-content: flex-end;
+}
+
+
+
+/* style.css */
+body {
+    /*background-color: #f8f9fa;*/ /* لون خلفية خفيف */
+}
+
+.card {
+    border: 2px solid #007bff; /*لون الإطار */
+    border-radius: 10px; /* زوايا مدورة */
+    transition: transform 0.3s ease; /* تأثير التحريك */
+}
+
+    .card:hover {
+        transform: scale(1.05); /* تكبير البطاقة عند التمرير */
+    }
+
+    .card img {
+        transition: transform 0.3s ease; /*تأثير التحريك على الصورة */
+    }
+
+        .card img:hover {
+            transform: scale(1.1); /* تكبير الصورة عند التمرير */
+        }
+
+.card-body {
+    padding: 15px; /* إضافة حشو داخلي */
+}
+
+.pagination {
+    margin-top: 20px; /* إضافة مسافة أعلى الصفحة */
+}
+
+    .pagination .page-link {
+        color: #007bff; /* لون روابط الصفحات */
+    }
+
+        .pagination .page-link:hover {
+            background-color: #e9ecef; /* تغيير لون الخلفية عند التمرير */
+        }
+
+/*navbar*/
+/* Thin and Consistent Text Styling for Navbar Items */
+.navbar .nav-link {
+    font-weight: 300; /* Light font weight */
+    font-size: 16px; /* Consistent font size */
+    color: #333; /* Dark gray color for readability */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center; /* Align text vertically centered */
+    transition: color 0.3s ease; /* Smooth transition for color on hover */
+}
+
+    /* Adjust Hover Effect */
+    .navbar .nav-link:hover {
+        color: #007bff; /* Change color on hover */
+    }
+
+/* Dropdown Menu Item Styling */
+.navbar .dropdown-menu .dropdown-item {
+    font-weight: 300; /* Light font weight */
+    font-size: 15px; /* Slightly smaller font size for dropdown items */
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+    .navbar .dropdown-menu .dropdown-item:hover {
+        color: #007bff;
+        background-color: #f1f1f1; /* Light background color on hover */
+    }
+
+/* Remove spacing issues for mobile */
+@media (max-width: 576px) {
+    .navbar .nav-link {
+        font-size: 15px; /* Smaller font size on mobile */
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+}
+
+
+/*icon*/
+.cart-icon-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.cart-text {
+    margin-left: 5px; /* المسافة بين الأيقونة والنص */
+    font-size: 1em; /* حجم الخط */
+    color: #333; /* لون النص */
+}
+/*PurchasedProduct*/
+<style >
+/* تنسيق العنوان */
+h2 {
+    text-align: center;
+    color: #34495e;
+    font-size: 2em; /* زيادة حجم الخط */
+    margin: 20px 0;
+    font-weight: 600; /* إضافة سمك خط */
+}
+
+/* تصميم الجدول */
+.table-container {
+    width: 100%;
+    max-width: 1600px;
+    background: #ffffff;
+    padding: 30px; /* زيادة padding لإعطاء مساحة أكبر */
+    border-radius: 12px; /* زيادة التدوير */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); /* تحسين الظلال */
+    overflow-x: auto;
+    margin-top: 30px; /* زيادة المسافة العلوية */
+}
+
+/* تصميم الجدول */
+table.table {
+    width: 100%;
+    border-collapse: separate; /* تغيير طريقة دمج الحدود */
+    border-spacing: 0 15px; /* إضافة مسافة بين الصفوف */
+    margin-top: 20px; /* زيادة المسافة العلوية للجدول */
+}
+
+    table.table th, table.table td {
+        padding: 20px; /* زيادة padding لإعطاء مساحة داخل الخلايا */
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+        font-size: 1.1em; /* زيادة حجم الخط داخل الخلايا */
+    }
+
+    table.table th {
+        background-color: #34495e;
+        color: #ffffff;
+        font-weight: 600;
+        text-transform: uppercase; /* جعل النص عريضًا */
+    }
+
+    table.table tbody tr {
+        transition: background-color 0.3s ease; /* إضافة تأثير */
+    }
+
+        table.table tbody tr:hover {
+            background-color: #f1f7fc;
+        }
+
+        table.table tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+    /* تحسين النصوص */
+    table.table tbody td {
+        color: #34495e;
+        font-weight: 400; /* تغيير الوزن في الخلايا */
+    }
+
+    /* تحسين التفاعل مع الجدول */
+    table.table td i {
+        color: #3498db; /* تغيير لون الأيقونة */
+        transition: color 0.3s ease;
+    }
+
+        table.table td i:hover {
+            color: #2c3e50;  /*تغيير لون الأيقونة عند المرور*/ 
+        }
+
+</style >
+/*البحث*/
+/* تصميم عنوان الصفحة */
+h2 {
+    font-size: 1.8em;
+    color: #34495e;
+    margin: 0;
+}
+
+/* تصميم خانة البحث */
+.search-input {
+    max-width: 300px; /* زيادة عرض حقل البحث قليلاً */
+    padding: 10px 15px;
+    font-size: 1em;
+    border-radius: 0.3rem;
+}
+
+/* تصميم زر البحث */
+.btn-search {
+    padding: 10px 20px; /* زيادة حجم الزر */
+    font-size: 1em; /* تكبير النص داخل الزر */
+    background-color: #007bff;
+    color: #ffffff;
+    border-radius: 0.3rem;
+    border: none;
+}
+
+/* تصميم زر "Create New Cinemas" ليكون أكبر أيضًا */
+.btn-danger {
+    padding: 10px 20px; /* زيادة حجم الزر */
+    font-size: 1em; /* تكبير النص داخل الزر */
+    border-radius: 0.3rem;
+}
+
+/* ضبط المسافات العمودية */
+.mb-3, .mb-4 {
+    margin-bottom: 1.5rem !important;
+}
+/*الممثل*/
+<style >
+.actor-image {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.actor-bio {
+    margin-left: 15px;
+}
+
+.social-link {
+    margin-top: 10px;
+}
+
+ تصغير حجم الزر 
+.btn-primary {
+    padding: 6px 12px; /* تصغير الحشوة */
+    font-size: 14px;  /*تصغير حجم الخط*/ 
+    border-radius: 10px;  /*إضافة تدوير الحواف*/ 
+    transition: background-color 0.3s ease;  /*إضافة تأثير عند التمرير*/ 
+    background-color: transparent;  /*جعل الخلفية شفافة*/ 
+    color: #007bff;  /*تغيير لون النص */
+}
+
+
+     تأثير عند التمرير على الزر 
+    .btn-primary:hover {
+        background-color: #000000 ;/* تغيير لون الخلفية عند التمرير*/ 
+        color: white;
+    }
+
+</style >
+
+
+<style >
+
+.actor-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.actor-info {
+    margin-top: 15px;
+}
+
+.movie-card {
+    margin-bottom: 15px;
+}
+
+.social-link {
+    margin-top: 10px;
+}
+
+</style >
+
+
+
+
+
+
